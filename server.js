@@ -2,7 +2,7 @@
 
 const framework = require('@redhat/faas-js-runtime');
 
-const functionPath = '/projects/node-function';
+const functionPath = process.env.FUNCTION_PATH || '/projects/node-function';
 const LISTEN_PORT = process.env.LISTEN_PORT || 8080;
 
 let server;
